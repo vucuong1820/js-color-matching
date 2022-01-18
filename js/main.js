@@ -15,7 +15,7 @@ function handleChange(second){
 }
 
 function handleFinish(){
-    setTimerText('GAME OVER')
+    setTimerText('GAME OVER! MIT THỬ LẠI ĐI 🥺🥺')
     gameStatus = GAME_STATUS.FINISHED
     showReplayBtn()
 }
@@ -71,7 +71,7 @@ function handleColorLick(liElement){
             //update game status
             gameStatus === GAME_STATUS.FINISHED
             //show YOU WIN text
-            setTimerText('YOU WIN')
+            setTimerText('MIT GIỎI QUÁ 🥳🥳')
             timer.clear()
         }
         //reset selections
