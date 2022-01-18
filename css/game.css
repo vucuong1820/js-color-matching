@@ -117,8 +117,12 @@
 /* ************ */
 /*    FOOTER    */
 /* ************ */
-footer {
+footer > div {
   margin-top: 1rem;
   color: rgba(255, 255, 255, 0.75);
   font-size: 14px;
+}
+
+footer > div a {
+  color: #0000EE
 }
