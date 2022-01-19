@@ -1,5 +1,5 @@
 import { GAME_STATUS, GAME_TIME, PAIRS_COUNT } from './constants.js'
-import { getColorElementList, getUlElement, getInActiveList, getPlayAgainButton } from './selectors.js';
+import { getColorElementList, getUlElement, getInActiveList, getPlayAgainButton, getColorBackground } from './selectors.js';
 import { createTimer, getRandomColorPairs, hideReplayBtn, setTimerText, showReplayBtn } from './utils.js'
 // Global variables
 let selections = []
@@ -62,6 +62,9 @@ function handleColorLick(liElement){
     const isMatch = firstColor === secondColor;
 
     if(isMatch){
+        //set background
+        const background = getColorBackground();
+        if(background) background.style.backgroundColor = firstColor;
         //check win
         const isWin = getInActiveList().length === 0;
         if(isWin){
